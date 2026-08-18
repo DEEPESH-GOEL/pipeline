@@ -36,11 +36,4 @@ template:
                     timeout: 10m
                     spec:
                       command: plan
-                - step:
-                    type: IACMOpenTofuPlugin
-                    name: apply
-                    identifier: apply
-                    timeout: 10m
-                    spec:
-                      command: apply
           tags: {}
