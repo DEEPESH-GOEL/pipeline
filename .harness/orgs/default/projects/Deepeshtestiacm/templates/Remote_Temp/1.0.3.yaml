@@ -23,7 +23,7 @@ template:
               steps:
                 - step:
                     type: IACMOpenTofuPlugin
-                    name: test
+                    name: init
                     identifier: init
                     timeout: 10m
                     spec:
