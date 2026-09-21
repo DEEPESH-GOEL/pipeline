@@ -33,7 +33,7 @@ template:
                     type: IACMOpenTofuPlugin
                     name: plan
                     identifier: plan
-                    timeout: 10m
+                    timeout: <+input>
                     spec:
                       command: plan
           tags: {}
