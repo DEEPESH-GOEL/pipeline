@@ -1,0 +1,40 @@
+template:
+  name: Remote Temp
+  identifier: Remote_Temp
+  versionLabel: "1.0.3"
+  type: Pipeline
+  projectIdentifier: Deepeshtestiacm
+  orgIdentifier: default
+  tags: {}
+  spec:
+    stages:
+      - stage:
+          name: test
+          identifier: test
+          description: ""
+          type: IACM
+          spec:
+            platform:
+              os: Linux
+              arch: Amd64
+            runtime:
+              type: Cloud
+              spec: {}
+            workspace: <+input>
+            execution:
+              steps:
+                - step:
+                    type: IACMOpenTofuPlugin
+                    name: init
+                    identifier: init
+                    timeout: 10m
+                    spec:
+                      command: init
+                - step:
+                    type: IACMOpenTofuPlugin
+                    name: plan
+                    identifier: plan
+                    timeout: 15m
+                    spec:
+                      command: plan
+          tags: {}
